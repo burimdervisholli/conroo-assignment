@@ -6,7 +6,6 @@ export function useSSE(callback: (data: any) => void): EventSource {
   const eventSource = new EventSource(url)
 
   eventSource.onmessage = (event) => {
-    console.log('SSE message received:', event.data)
     callback(JSON.parse(event.data))
   }
 
