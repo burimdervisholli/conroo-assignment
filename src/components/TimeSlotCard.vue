@@ -16,6 +16,12 @@ const color = computed(() => {
     }[timeSlot.category] || 'bg-gray-100'
   )
 })
+
+const progressBarWidth = computed(() => {
+  const current = timeSlot.capacity.current_capacity
+  const max = timeSlot.capacity.max_capacity
+  return max > 0 ? `${(current / max) * 100}%` : '0%'
+})
 </script>
 
 <template>
@@ -30,11 +36,7 @@ const color = computed(() => {
           class="h-full transition-all"
           :class="color"
           :style="{
-            width:
-              (timeSlot.capacity.current_capacity /
-                timeSlot.capacity.max_capacity) *
-                100 +
-              '%'
+            width: progressBarWidth
           }"
         ></div>
       </div>
