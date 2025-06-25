@@ -8,7 +8,7 @@ This project uses a modern tech stack for building fast and maintainable web app
 
 ## What is it for?
 
-This template provides a solid starting point for developing Vue 3 applications with TypeScript support, leveraging Vite for rapid development and hot module replacement.
+This application allows users to track timeslots in real time, making it easy to manage schedules, monitor activities, and visualize time allocation efficiently.
 
 ## Installation
 
@@ -23,8 +23,6 @@ cd <project-directory>
 
 ```bash
 npm install
-# or
-yarn install
 ```
 
 ## Usage
@@ -33,23 +31,6 @@ yarn install
 
   ```bash
   npm run dev
-  # or
-  yarn dev
-  ```
-
-- **Build for production:**
-
-  ```bash
-  npm run build
-  # or
-  yarn build
-  ```
-
-- **Preview the production build:**
-  ```bash
-  npm run preview
-  # or
-  yarn preview
   ```
 
 ## Learn More
