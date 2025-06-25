@@ -25,8 +25,20 @@ const color = computed(() => {
       {{ format(timeSlot.end_time, 'HH:mm') }}
     </span>
     <div class="flex items-center gap-2 items-center justify-center pb-2">
-      <span class="block size-2 rounded-full" :class="color"></span>
-      <span>
+      <div class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
+        <div
+          class="h-full transition-all"
+          :class="color"
+          :style="{
+            width:
+              (timeSlot.capacity.current_capacity /
+                timeSlot.capacity.max_capacity) *
+                100 +
+              '%'
+          }"
+        ></div>
+      </div>
+      <span class="w-[50px] text-center text-sm">
         {{ timeSlot.capacity.current_capacity }} /
         {{ timeSlot.capacity.max_capacity }}
       </span>

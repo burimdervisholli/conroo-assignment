@@ -8,3 +8,9 @@ export interface TimeSlot {
     max_capacity: number
   }
 }
+
+export interface timeSlotUpdateReponse {
+  id: number
+  currentCapacity: number
+  category: 'green' | 'yellow' | 'red'
+}
