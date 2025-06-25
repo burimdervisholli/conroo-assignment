@@ -1,10 +1,10 @@
 export interface TimeSlot {
   id: number
-  start_time: string | Date
-  end_time: string | Date
+  start_time: Date | string
+  end_time: Date | string
   category: 'green' | 'yellow' | 'red'
   capacity: {
-    current: number
-    maximum: number
+    current_capacity: number
+    max_capacity: number
   }
 }
